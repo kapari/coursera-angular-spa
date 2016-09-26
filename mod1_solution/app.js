@@ -1,14 +1,17 @@
 (function () {
-'use strict';
+    'use strict';
 
-angular.module('LunchCheck', [])
+    angular.module('LunchCheck', [])
+           .controller('LunchCheckController', LunchCheckController);
 
-.controller('LunchCheckController', function ($scope) {
-  $scope.lunchList = "";
-  $scope.lunchMessage = "";
-  $scope.checkIfTooMuch = function () {
-    return "Test";
-  };
-});
+    LunchCheckController.$inject = ['$scope'];
+
+    function LunchCheckController($scope) {
+        $scope.lunchList = "";
+        $scope.lunchMessage = "";
+        $scope.checkIfTooMuch = function () {
+            return "Test";
+        };
+    }
 
 })();
